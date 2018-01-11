@@ -19,13 +19,16 @@
         </form>
     </nav>
     <!-- Attractions on the side based on current time-->
-    
-    
-    <div>
-        <div class="sidebar" id="sidebar">
+
+    <div id="container"> <!-- div for ALL -->
+
+        <div class="sidebar col-md-4 float-left" id="sidebar">
             <h2>Attractions</h2>
+            <p>Stuff</p>
         </div>
-        <div class="col-md-8 main">
+
+        <!-- grid -->
+        <div class="col-md-8 main float-right">
             <div class="row">
                 <div class="col-md-4 gridBox area0 area" id="1"></div>
                 <div class="col-md-4 gridBox area1 area" id="2"></div>
@@ -41,17 +44,20 @@
                 <div class="col-md-4 gridBox area6 area" id="7"></div>
                 <div class="col-md-4 gridBox area7 area" id="8"></div>
             </div>
-
-            </div>
         </div>
-        <div class="card-footer text-muted">
+        <!-- /grid -->
+
+        <!-- footer -->
+        <div class="text-muted">
             <footer class="footer">
                 <div>The Sorcerer's Stone &copy;
                     <span id="footer-date"> </span>
                 </div>
-                <!--Footer must have Copyright and date -->
             </footer>
         </div>
+        <!-- /footer -->
+
+    </div> <!-- /div for ALL -->
 </body>
 <script src="dist/bundle.js"></script>
 
