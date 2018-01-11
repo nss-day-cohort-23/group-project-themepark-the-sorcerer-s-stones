@@ -6,6 +6,7 @@ module.exports.getTime = () => {
     let time = `${date.getHours()}:${date.getMinutes()}`;
     let newTime = time.replace(":", "");
     return time;
+    
 };
 
 module.exports.getAreas = () => {
@@ -48,4 +49,22 @@ module.exports.getAttrTypes = () => {
     });
 };
 
+// FOOTER DATE FUNCTION
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth()+1;
+let yyyy = today.getFullYear();
 
+if(dd < 10) {
+    dd = '0'+dd;
+}
+
+if (mm < 10) {
+    mm = '0'+mm;
+}
+
+today = `${mm}/${dd}/${yyyy}`;
+console.log("today's date: ", today);
+
+document.getElementById("footer-date").innerHTML = today;
+// END OF FOOTER DATE

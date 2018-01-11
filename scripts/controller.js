@@ -14,7 +14,9 @@ const searchAttrByName = (input) => {
     if (input.keyCode === 13) {
         factory.getAttrTypes
         .then( attractions=>{
+            console.log('att',attractions );
             
-        })
+            
+        });
     }
-}
+};

@@ -31,11 +31,11 @@ module.exports = function(grunt){
             }
         },
         browserify: {
-            'dist/bundle.js': ['scripts/main.js']
+            'dist/bundle.js': ['scripts/main.js'],
+            options:{
+                transform: ['hbsfy'],
+            } 
         },
-        options:{
-            transform: ['hbsfy'],
-        } 
     });
     require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
     grunt.registerTask('default', ['jshint', 'sass', 'browserify', 'watch']);
