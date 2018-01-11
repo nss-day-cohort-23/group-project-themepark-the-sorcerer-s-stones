@@ -1,5 +1,4 @@
 "use strict";
-
 const $ = require('jquery');
 
 module.exports.getTime = () => {
@@ -42,7 +41,8 @@ module.exports.getAttrTypes = () => {
             url: 'https://the-sorc.firebaseio.com/attraction_types.json'
         }).done( (data) => {
             resolve(data);
-    
+            
+            
         }).fail((error) => {
             reject(error);
         });

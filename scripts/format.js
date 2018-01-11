@@ -19,3 +19,18 @@ module.exports.formatAttr = (areas, attr, attrTypes) => {
     });
     return updateAttr;
 };
+
+module.exports.findSearchData = (attractions, input) => {
+    let attractionsListArray = [];
+    for (let i = 0; i < attractions.length; i++) {
+    
+        
+        if (attractions[i].name.toLowerCase().includes(input.toLowerCase())) {
+            attractionsListArray.push(attractions[i]);
+        }
+        
+    }
+    console.log(attractionsListArray);
+    return attractionsListArray;
+    
+};

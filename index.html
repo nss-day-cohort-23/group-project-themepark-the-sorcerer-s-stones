@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title>The Sorcerer's Stone Park Map</title>
 </head>
@@ -13,57 +14,58 @@
 <body>
     <nav class="navbar justify-content-between">
         <a class="navbar-brand">The Sorcerer's Stone Park</a>
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <input id="time-selector" type="time" step="900">
-        </form>
+
+        <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+        <input id="time-selector" type="time" step="900">
+
     </nav>
     <!-- Attractions on the side based on current time-->
 
-    <div id="container"> <!-- div for ALL -->
+    <div id="container">
+        <!-- div for ALL -->
 
         <div class="sidebar col-md-4 float-left" id="#sidebar">
             <h2>Attractions</h2>
             <div class="attr-display"></div>
         </div>
-        
+
         <div class="col-md-8 main">
-                <div class="row" id="sidebar">
-                        <h2>Attractions</h2>
-                    </div>
+            <div class="row" id="sidebar">
+                <h2>Attractions</h2>
+            </div>
 
-        <!-- grid -->
-        <div class="col-md-8 main float-right">
-            <div class="row">
-                <div class="col-md-4 gridBox area0 area" id="1"></div>
-                <div class="col-md-4 gridBox area1 area" id="2"></div>
-                <div class="col-md-4 gridBox area2 area" id="3"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 gridBox area3 area" id="4"></div>
-                <div class="col-md-4 gridBox areaBlank"></div>
-                <div class="col-md-4 gridBox area4 area" id="5"></div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 gridBox area5 area" id="6"></div>
-                <div class="col-md-4 gridBox area6 area" id="7"></div>
-                <div class="col-md-4 gridBox area7 area" id="8"></div>
-            </div>
-        </div>
-        <!-- /grid -->
-
-        <!-- footer -->
-        <div class="text-muted">
-            <footer class="footer">
-                <div>The Sorcerer's Stone &copy;
-                    <span id="footer-date"> </span>
+            <!-- grid -->
+            <div class="col-md-8 main float-right">
+                <div class="row">
+                    <div class="col-md-4 gridBox area0 area" id="1"></div>
+                    <div class="col-md-4 gridBox area1 area" id="2"></div>
+                    <div class="col-md-4 gridBox area2 area" id="3"></div>
                 </div>
-            </footer>
-        </div>
-        <!-- /footer -->
+                <div class="row">
+                    <div class="col-md-4 gridBox area3 area" id="4"></div>
+                    <div class="col-md-4 gridBox areaBlank"></div>
+                    <div class="col-md-4 gridBox area4 area" id="5"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 gridBox area5 area" id="6"></div>
+                    <div class="col-md-4 gridBox area6 area" id="7"></div>
+                    <div class="col-md-4 gridBox area7 area" id="8"></div>
+                </div>
+            </div>
+            <!-- /grid -->
 
-    </div> <!-- /div for ALL -->
+            <!-- footer -->
+            <div class="text-muted">
+                <footer class="footer">
+                    <div>The Sorcerer's Stone &copy;
+                        <span id="footer-date"> </span>
+                    </div>
+                </footer>
+            </div>
+            <!-- /footer -->
+
+        </div>
+        <!-- /div for ALL -->
 </body>
 <script src="dist/bundle.js"></script>
 

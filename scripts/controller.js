@@ -26,3 +26,14 @@ module.exports.startAreaClick = (divId) => {
         output.printClickArea(updateAttr, divId);
     });
 };
+
+module.exports.searchAttrByName = (input) => {
+    factory.getAttr()
+        .then(attractions => {
+          format.findSearchData(attractions, input);
+          
+          
+            });
+            
+       
+};

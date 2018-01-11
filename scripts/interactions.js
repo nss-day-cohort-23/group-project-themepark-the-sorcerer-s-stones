@@ -2,6 +2,7 @@
 let $ = require("jquery");
 let controller = require("./controller");
 
+
 $(window).ready(() => {
     controller.startAreas();
 });
@@ -12,6 +13,16 @@ $('.area').on("click", function() {
 });
 
 
+
+
+$('.search').on("keypress",function () {
+    console.log('is this working' );
+    
+    if(event.keyCode === 13){
+    let input = $('.search').val();
+    controller.searchAttrByName(input); 
+    }
+});
 
 const timeNow = () => {
     let currentTime = new Date(Date.now()),
