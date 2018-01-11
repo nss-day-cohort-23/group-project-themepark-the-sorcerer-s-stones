@@ -16,6 +16,7 @@
         <form class="form-inline">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input id="time-selector" type="time" step="900">
         </form>
     </nav>
     <!-- Attractions on the side based on current time-->
@@ -26,7 +27,13 @@
             <h2>Attractions</h2>
             <div class="attr-display"></div>
         </div>
+        <!-- <div class="sidebar" id="sidebar">
+            <h2>Attractions</h2>
+        </div> -->
         <div class="col-md-8 main">
+                <div class="row" id="sidebar">
+                        <h2>Attractions</h2>
+                    </div>
             <div class="row">
                 <div class="col-md-4 gridBox area0 area" id="1"></div>
                 <div class="col-md-4 gridBox area1 area" id="2"></div>
