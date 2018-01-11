@@ -7,6 +7,6 @@ $(window).ready(() => {
 });
 
 $('.area').on("click", function() {
-    console.log('CLICK AREA', this);
-    controller.startAreaClick();
+    let divId = this.id;
+    controller.startAreaClick(divId);
 });
