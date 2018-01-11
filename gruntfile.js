@@ -34,7 +34,7 @@ module.exports = function(grunt){
             'dist/bundle.js': ['scripts/main.js'],
             options:{
                 transform: ['hbsfy'],
-            } 
+        } 
         },
     });
     require('matchdep').filter('grunt-*').forEach(grunt.loadNpmTasks);
