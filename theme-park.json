@@ -51,6 +51,12 @@
         },
         {
             "id": 7,
+            "name": "Park Entrance",
+            "description": "Welcome to the most magical place on earth!",
+            "colorTheme": "dabd72C"
+        },
+        {
+            "id": 8,
             "name": "Cinderlla Castle",
             "description": "Rising high in the sky at the end of Main Street, U.S.A., Cinderella Castle welcomes you to a magical world of fantasy and fun. The central icon of Walt Disney World Resort, the castle invites all who visit to celebrate in a place where dreams come true.",
             "colorTheme": "F2CF53"
