@@ -13,7 +13,7 @@ module.exports.startAreas = () => {
 };
 
         
-module.exports.startAreaClick = () => {
+module.exports.startAreaClick = (divId) => {
     let areas = factory.getAreas();
     let attractions = factory.getAttr();
     let attrTypes = factory.getAttrTypes();
@@ -22,7 +22,8 @@ module.exports.startAreaClick = () => {
         return format.formatAttr(dataArray[0], dataArray[1], dataArray[2]);        
     })
     .then((updateAttr) => {
-        // factory.openRides
+        console.log(updateAttr, divId );
+        output.printClickArea(updateAttr, divId);
     });
 };
 

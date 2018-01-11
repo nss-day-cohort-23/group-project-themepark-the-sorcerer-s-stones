@@ -68,3 +68,4 @@ console.log("today's date: ", today);
 
 document.getElementById("footer-date").innerHTML = today;
 // END OF FOOTER DATE
+

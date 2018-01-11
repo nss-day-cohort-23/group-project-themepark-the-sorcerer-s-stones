@@ -26,7 +26,7 @@ module.exports.findSearchData = (attractions, input) => {
     
         
         if (attractions[i].name.toLowerCase().includes(input.toLowerCase())) {
-            attractions.push(attractions[i]);
+            attractionsListArray.push(attractions[i]);
         }
         
     }
