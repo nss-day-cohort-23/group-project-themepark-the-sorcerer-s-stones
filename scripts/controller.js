@@ -25,3 +25,14 @@ module.exports.startAreaClick = () => {
         // factory.openRides
     });
 };
+
+module.exports.searchAttrByName = (input) => {
+    factory.getAttr()
+        .then(attractions => {
+          format.findSearchData(attractions, input);
+          
+          
+            });
+            
+       
+};

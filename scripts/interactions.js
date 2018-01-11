@@ -13,13 +13,10 @@ $('.area').on("click", function() {
 });
 
 
-const searchAttrByName = (input) => {
-    if (input.keyCode === 13) {
-        factory.getAttrTypes
-            .then(attractions => {
-                console.log('att', attractions);
-
-
-            });
+$('.search').on("keypress",function () {
+    if(event.keyCode === 13){
+    let input = $('.search').val();
+    controller.searchAttrByName(input); 
     }
-};
+});
+
