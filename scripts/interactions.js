@@ -24,6 +24,6 @@ const timeNow = () => {
     $("#time-selector").val(`${currentHours}:${currentMinutes}`);
 };
 
-// $('#time').bootstrapMaterialDatePicker({ date: false });  This isn't working!!! why??
+// $('#time').bootstrapMaterialDatePicker({ date: false });  This isn't working!!! 
 
 // $('time-selector').change(searchAttractionsByHour);
