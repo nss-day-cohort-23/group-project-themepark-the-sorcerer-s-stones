@@ -11,6 +11,9 @@ $('.area').on("click", function() {
     controller.startAreaClick(divId);
 });
 
+
+
+
 $(document).on("click", ".attr-info", function() {
     console.log(this.eq('.hidden'));
 });
