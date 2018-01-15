@@ -1,6 +1,16 @@
 "use strict";
 const $ = require('jquery');
 
+module.exports.timeNow = () => {
+    let currentTime = new Date(Date.now()),
+    currentHours = currentTime.getHours(),
+    currentMinutes = currentTime.getMinutes();
+    currentMinutes = currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
+    let time = `${currentHours}${currentMinutes}`;
+    return time;
+    // $("#time-selector").val(`${currentHours}:${currentMinutes}`);
+};
+
 module.exports.getTime = () => {
     let date = new Date();
     let time = `${date.getHours()}:${date.getMinutes()}`;
