@@ -28,5 +28,11 @@ module.exports.printSearchArea = (searchAttr) =>{
   searchAttr.forEach((obj) =>{
       $('.attr-display').append(searchAttrByName(obj));
     });
-    
+    searchAttr.forEach((areas) => {
+        let highLight = $(`.area${areas.area_id}`);
+        highLight.css('border', '10px solid');
+    });
 };
+        
+
+        
