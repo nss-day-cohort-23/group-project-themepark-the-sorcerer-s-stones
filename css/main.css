@@ -24,8 +24,8 @@
   border: 2px solid black;
   text-align: center; }
 
-.gridBox h2 {
-  vertical-align: center; }
+h2 {
+  font-size: 4em; }
 
 #sidebar {
   font-family: 'Roboto', sans-serif; }
@@ -41,5 +41,10 @@
 
 .hidden {
   display: none; }
+
+.main {
+  background-image: url("../images/HPmap.jpg");
+  background-size: cover;
+  background-position: center center; }
 
 /*# sourceMappingURL=main.css.map */
