@@ -34,8 +34,8 @@ const timeNow = () => {
 };
 
 $(document).on('click', '.attraction-click', function() {
-        console.log('this:', this);
     $(this).children().show();
+    $(this).siblings().children('.hidden').hide();
 });
 
 // $('#time').bootstrapMaterialDatePicker({ date: false });  This isn't working!!! 
