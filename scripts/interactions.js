@@ -33,6 +33,11 @@ const timeNow = () => {
     $("#time-selector").val(`${currentHours}:${currentMinutes}`);
 };
 
+$(document).on('click', '.attraction-click', function() {
+    $(this).children().show();
+    $(this).siblings().children('.hidden').hide();
+});
+
 // $('#time').bootstrapMaterialDatePicker({ date: false });  This isn't working!!! 
 
 // $('time-selector').change(searchAttractionsByHour);

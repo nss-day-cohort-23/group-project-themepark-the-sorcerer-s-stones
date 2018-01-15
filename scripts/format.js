@@ -5,6 +5,18 @@ const $ = require('jquery');
 module.exports.formatAttr = (areas, attr, attrTypes) => {
     let updateAttr = [];
     attr.forEach((obj) => {
+        if ( obj.hasOwnProperty("times") ) {
+            obj.time_format = [];
+            for(let i = 0; i < obj.times.length; i++) {
+                if (obj.times[i].slice(-2) === "AM") {
+                    obj.time_format.push(+(obj.times[i].replace(':', '').slice(0, -2)));
+                } else if (obj.times[i].slice(-2) === "PM" && obj.times[i].slice(0, 2) === "12") {
+                obj.time_format.push(+(obj.times[i].replace(':', '').slice(0, -2 )));                    
+              } else if (obj.times[i].slice(-2) === "PM" && obj.times[i].slice(0, 2) !== "12") {
+                  obj.time_format.push(+(obj.times[i].replace(':', '').slice(0, -2 )) + 1200);
+              }
+            }
+        }
         for ( let i = 0; i < attrTypes.length; i++ ) {
             if(obj.type_id === attrTypes[i].id) {
                 obj.type_name = attrTypes[i].name;

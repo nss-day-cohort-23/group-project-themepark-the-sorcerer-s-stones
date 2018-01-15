@@ -22,7 +22,7 @@ module.exports.startAreaClick = (divId) => {
         return format.formatAttr(dataArray[0], dataArray[1], dataArray[2]);        
     })
     .then((updateAttr) => {
-        console.log(updateAttr, divId );
+        console.log("CHECK TIMES", updateAttr, divId );
         output.printClickArea(updateAttr, divId);
     });
 };
@@ -30,10 +30,7 @@ module.exports.startAreaClick = (divId) => {
 module.exports.searchAttrByName = (input) => {
     factory.getAttr()
         .then(attractions => {
-          format.findSearchData(attractions, input);
-          
-          
+          format.findSearchData(attractions, input);                 
             });
-            
-       
-};
+
+        };
