@@ -5,6 +5,7 @@ let controller = require("./controller");
 
 $(window).ready(() => {
     controller.startAreas();
+    controller.displayTimeAttr();
 });
 
 $('.area').on("click", function() {
@@ -24,14 +25,7 @@ $('.search').on("keypress",function () {
     }
 });
 
-const timeNow = () => {
-    let currentTime = new Date(Date.now()),
-    currentHours = currentTime.getHours(),
-    currentMinutes = currentTime.getMinutes();
-    currentMinutes = currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
 
-    $("#time-selector").val(`${currentHours}:${currentMinutes}`);
-};
 
 $(document).on('click', '.attraction-click', function() {
     $(this).children().show();

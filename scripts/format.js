@@ -46,3 +46,18 @@ module.exports.findSearchData = (attractions, input) => {
     return attractionsListArray;
     
 };
+
+module.exports.findOpenRides = (attr, time) => {
+    let openRides = [];
+    attr.forEach((obj) => {
+        if (obj.hasOwnProperty('times')) {
+            for (let i = 0; i < obj.time_format.length; i++) {
+                let timeString = (obj.time_format[i].toString());
+                if ( timeString.slice(0, -2) === time.slice(0, -2) ) {
+                    openRides.push(obj);
+                }
+            }
+        }
+    });
+    return openRides;
+};

@@ -34,3 +34,21 @@ module.exports.searchAttrByName = (input) => {
             });
 
         };
+
+module.exports.displayTimeAttr = () => {
+    let time = factory.timeNow();
+    let areas = factory.getAreas();
+    let attractions = factory.getAttr();
+    let attrTypes = factory.getAttrTypes();
+    Promise.all([areas, attractions, attrTypes])
+    .then((dataArray) => {
+        return format.formatAttr(dataArray[0], dataArray[1], dataArray[2]);        
+    })
+    .then((formatAttr) => {
+        return format.findOpenRides(formatAttr, time);
+    })
+    .then((openRides) => {
+        output.printOpenRides(openRides);
+    });
+
+};

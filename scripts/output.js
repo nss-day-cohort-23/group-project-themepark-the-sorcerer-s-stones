@@ -3,6 +3,7 @@ let $ = require("jquery");
 let areaAttrTemplate = require("../templates/areaAttr.hbs");
 let openAttrTemplate = require("../templates/openAttr.hbs");
 let areaTemplate = require("../templates/areas.hbs");
+let openNowTemplate = require("../templates/openNowAttr.hbs");
 
 
 module.exports.printToDom = (parkAreas) => {
@@ -19,4 +20,10 @@ module.exports.printClickArea = (attr, divId) => {
             $('.attr-display').append(areaAttrTemplate(obj));
         }
     });
+};
+
+module.exports.printOpenRides = (openRides) => {
+    openRides.forEach((obj) => {
+        $('.attr-display').append(openNowTemplate(obj));
+   });
 };
