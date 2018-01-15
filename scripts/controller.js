@@ -45,8 +45,8 @@ module.exports.searchAttrByName = (input) => {
 };
 
 
-module.exports.displayTimeAttr = () => {
-    let time = factory.timeNow();
+module.exports.displayTimeAttr = (time) => {
+    console.log('Time Check Controller:', time );
     let areas = factory.getAreas();
     let attractions = factory.getAttr();
     let attrTypes = factory.getAttrTypes();

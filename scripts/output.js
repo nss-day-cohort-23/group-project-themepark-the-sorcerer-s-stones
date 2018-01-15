@@ -25,14 +25,16 @@ module.exports.printClickArea = (attr, divId) => {
 };
 
 module.exports.printOpenRides = (openRides) => {
+    $('.attr-display').html("");
     openRides.forEach((obj) => {
         $('.attr-display').append(openNowTemplate(obj));
-   });
+    });
 };
 
 module.exports.printSearchArea = (searchAttr) =>{
+    $('.attr-display').html("");
     console.log('is this working', searchAttr );
-  searchAttr.forEach((obj) =>{
+  searchAttr.forEach((obj) => {
       $('.attr-display').append(searchAttrByName(obj));
         });
     };
