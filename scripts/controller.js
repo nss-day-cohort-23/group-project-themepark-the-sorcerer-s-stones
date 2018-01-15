@@ -37,6 +37,9 @@ module.exports.searchAttrByName = (input) => {
     })
     .then(attractions => {
     return  format.findSearchData(attractions, input);
+    })
+    .then((searchAttr) =>{
+        output.printSearchArea(searchAttr);
     });
     
 };

@@ -23,9 +23,9 @@ module.exports.printClickArea = (attr, divId) => {
     });
 };
 
-module.exports.printSearchArea = (attractionsSearch) =>{
-    console.log('is this working', attractionsSearch );
- 
-    $('.attr-display').append(searchAttrByName(attractionsSearch));
-   
+module.exports.printSearchArea = (searchAttr) =>{
+    console.log('is this working', searchAttr );
+  
+    
+    $('.attr-display').append(searchAttrByName(searchAttrByName));
 };
