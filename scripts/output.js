@@ -25,7 +25,8 @@ module.exports.printClickArea = (attr, divId) => {
 
 module.exports.printSearchArea = (searchAttr) =>{
     console.log('is this working', searchAttr );
-  
+  searchAttr.forEach((obj) =>{
+      $('.attr-display').append(searchAttrByName(obj));
+    });
     
-    $('.attr-display').append(searchAttrByName(searchAttrByName));
 };
