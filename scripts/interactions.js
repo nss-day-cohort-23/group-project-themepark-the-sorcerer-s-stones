@@ -16,7 +16,7 @@ $('.area').on("click", function() {
 
 
 $('.search').on("keypress",function () {
-    console.log('is this working' );
+    
     
     if(event.keyCode === 13){
     let input = $('.search').val();

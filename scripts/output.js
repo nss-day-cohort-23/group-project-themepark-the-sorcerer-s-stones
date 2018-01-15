@@ -1,8 +1,10 @@
+
 "use strict";
 let $ = require("jquery");
 let areaAttrTemplate = require("../templates/areaAttr.hbs");
 let openAttrTemplate = require("../templates/openAttr.hbs");
 let areaTemplate = require("../templates/areas.hbs");
+let searchAttrByName = require("../templates/searchAttr.hbs");
 
 
 module.exports.printToDom = (parkAreas) => {
@@ -19,4 +21,12 @@ module.exports.printClickArea = (attr, divId) => {
             $('.attr-display').append(areaAttrTemplate(obj));
         }
     });
+};
+
+module.exports.printSearchArea = (searchAttr) =>{
+    console.log('is this working', searchAttr );
+  searchAttr.forEach((obj) =>{
+      $('.attr-display').append(searchAttrByName(obj));
+    });
+    
 };

@@ -28,9 +28,18 @@ module.exports.startAreaClick = (divId) => {
 };
 
 module.exports.searchAttrByName = (input) => {
-    factory.getAttr()
-        .then(attractions => {
-          format.findSearchData(attractions, input);                 
-            });
-
-        };
+    let areas = factory.getAreas();
+    let attractions = factory.getAttr();
+    let attrTypes = factory.getAttrTypes();
+    Promise.all([areas, attractions, attrTypes])
+    .then( (data) => {
+        return format.formatAttr(data[0], data[1], data[2]);
+    })
+    .then(attractions => {
+    return  format.findSearchData(attractions, input);
+    })
+    .then((searchAttr) =>{
+        output.printSearchArea(searchAttr);
+    });
+    
+};
