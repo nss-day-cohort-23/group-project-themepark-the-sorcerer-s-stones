@@ -22,7 +22,7 @@ module.exports.startAreaClick = (divId) => {
         return format.formatAttr(dataArray[0], dataArray[1], dataArray[2]);        
     })
     .then((updateAttr) => {
-        console.log(updateAttr, divId );
+        console.log("CHECK TIMES", updateAttr, divId );
         output.printClickArea(updateAttr, divId);
     });
 };
