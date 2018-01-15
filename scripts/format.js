@@ -42,7 +42,6 @@ module.exports.findSearchData = (attractions, input) => {
         }
         
     }
-    console.log(attractionsListArray);
     return attractionsListArray;
     
 };
@@ -57,6 +56,8 @@ module.exports.findOpenRides = (attr, time) => {
                     openRides.push(obj);
                 }
             }
+        } else if (obj.hasOwnProperty('times') === false) {
+            openRides.push(obj);
         }
     });
     return openRides;
