@@ -1,11 +1,13 @@
 "use strict";
 let $ = require("jquery");
 let controller = require("./controller");
+let factory = require("./factory");
 
 
 $(window).ready(() => {
     controller.startAreas();
-    controller.displayTimeAttr();
+    let time = factory.timeNow();
+    controller.displayTimeAttr(time);
 });
 
 $('.area').on("click", function() {
@@ -32,6 +34,10 @@ $(document).on('click', '.attraction-click', function() {
     $(this).siblings().children('.hidden').hide();
 });
 
-// $('#time').bootstrapMaterialDatePicker({ date: false });  This isn't working!!! 
+$('#time-selector').on('change', function() {
+    let time = $('#time-selector').val();
+    controller.displayTimeAttr(time.replace(':', ''));
 
-// $('time-selector').change(searchAttractionsByHour);
+});
+
+
