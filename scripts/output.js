@@ -32,6 +32,7 @@ module.exports.printOpenRides = (openRides) => {
 };
 
 module.exports.printSearchArea = (searchAttr) =>{
+    $('.area').css('border', '2px solid');
     $('.attr-display').html("");
     console.log('is this working', searchAttr );
   searchAttr.forEach((obj) => {
