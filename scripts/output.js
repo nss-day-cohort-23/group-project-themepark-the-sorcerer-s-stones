@@ -40,6 +40,6 @@ module.exports.printSearchArea = (searchAttr) =>{
         });
         searchAttr.forEach( (areas) => {
         let highlight = $(`.area${areas.area_id}`);
-        highlight.css('border', '8px solid');
+        highlight.css('border', '5px dashed');
         });
     };
